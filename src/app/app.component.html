@@ -4,7 +4,30 @@
 	</button>
 	<span>Rook's Roulette</span>
 	<img class="rich-rook" src="assets/rook.png">
+	<div class="button-group">
+		<button *ngIf="postCount > 0" (click)="back()" mat-icon-button>
+			<mat-icon>arrow_back</mat-icon>
+		</button>
+		<button class="wheel-button" color="primary" mat-raised-button (click)="spinWheel()">
+			Spin The Wheel!
+		</button>
+		
+		<button *ngIf="postCount > 0" (click)="spinWheel()" mat-icon-button>
+			<mat-icon>arrow_forward</mat-icon>
+		</button>
+	</div>
+	<button *ngIf="currentPost >= 0" class="info-button" mat-icon-button 
+		(click)="goToSource()" matTooltip="Open In e621">
+		<mat-icon>pets</mat-icon>
+	</button>
 </mat-toolbar>
-<button color="primary" mat-raised-button (click)="getPosts()">
-	Load
-</button>
+<div class="main-container">
+	<div class="img-container">
+		<h3 *ngIf="errorText">{{ errorText }}</h3>
+		<img class="image" *ngIf="!isVideo()" [src]="getImage()">
+		<video *ngIf="isVideo()" class="image" autoplay loop preload="auto" controls>
+			<source [src]="getImage()">
+		</video>
+	</div>
+	
+</div>

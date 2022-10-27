@@ -1,5 +1,9 @@
 import { PostFile } from './postFile.model';
 
+export class ApiData {
+	posts: Post[] = [];
+}
+
 export class Post {
 	id: number = -1;
 	created_at: Date = new Date();
