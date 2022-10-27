@@ -3,6 +3,24 @@
 	margin-left: 15px;
 }
 
+.drawer-container {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 auto;
+}
+
+.drawer-content {
+	display: flex;
+}
+
+.options-container {
+	padding: 10px;
+}
+
+::ng-deep .mat-card-header-text {
+	margin-left: 0px !important;
+}
+
 .main-container {
 	display: flex;
 	flex-direction: column;

@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
 import { ApiData, Post } from './models/post.model';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
 	selector: 'app-root',
@@ -9,7 +10,7 @@ import { ApiData, Post } from './models/post.model';
 	styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-	
+
 	private apiUrl: string = 'https://e621.net/posts.json';
 	private login: string = 'RedRookShep';
 	private apiKey: string = 'qCANh8LhWtMDa7ytSjKYes6m';
@@ -93,6 +94,14 @@ export class AppComponent {
 	
 	public goToSource() {
 		window.open("https://e621.net/posts/" + this.posts[this.currentPost]?.id, '_blank');
+	}
+	
+	public addTag($event: any) {
+		var tag: string = $event.value.toLowerCase();
+		if (!tag) return;
+		if (this.tags.indexOf(tag) < 0)
+			this.tags.push(tag);
+		$event.value = '';
 	}
 	
 }
