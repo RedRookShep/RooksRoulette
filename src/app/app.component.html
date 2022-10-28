@@ -5,14 +5,14 @@
 	<span>Rook's Roulette</span>
 	<img class="rich-rook" src="assets/rook.png">
 	<div class="button-group">
-		<button *ngIf="postCount > 0" (click)="back()" mat-icon-button>
+		<button *ngIf="posts.length > 0" (click)="back()" mat-icon-button>
 			<mat-icon>arrow_back</mat-icon>
 		</button>
 		<button class="wheel-button" color="primary" mat-raised-button (click)="spinWheel()">
 			Spin The Wheel!
 		</button>
 		
-		<button *ngIf="postCount > 0" (click)="spinWheel()" mat-icon-button>
+		<button *ngIf="posts.length > 0" (click)="spinWheel()" mat-icon-button>
 			<mat-icon>arrow_forward</mat-icon>
 		</button>
 	</div>
@@ -36,16 +36,49 @@
 				
 				<mat-card-content>
 					<ul>
-						<li *ngFor="let tag of tags">{{ tag }} <i class="fa-solid fa-xmark"></i></li>
+						<li *ngFor="let tag of tags">{{ tag }} <span (click)="removeTag(tag)"><i class="fa-solid fa-xmark remove-tag-icon"></i></span></li>
 					</ul>
 				</mat-card-content>
 				<mat-card-actions>
 					<mat-form-field appearance="fill">
 						<mat-label>New Tag</mat-label>
-						<input #newTag matInput (keyup.enter)="addTag(newTag)">
+						<input #newTag matInput (keyup.enter)="addTagSubmit(newTag)">
 					</mat-form-field>
-					<button mat-button>+</button>
+					<button mat-button class="clickable" (click)="addTagSubmit(newTag)">+</button>
 				</mat-card-actions>
+			</mat-card>
+			<mat-card>
+				<mat-card-header>
+					<div mat-card-avatar><mat-icon>supervised_user_circle</mat-icon></div>
+					<mat-card-title>Friend Modes</mat-card-title>
+				</mat-card-header>
+				
+				<mat-card-content class="friend-mode-list">
+					<mat-checkbox class="friend-mode-chk"
+								  [checked]="bayleMode"
+								  (change)="bayleMode = $event.checked; flushCache();">
+					  Bayle Mode
+					</mat-checkbox>
+					
+					<mat-checkbox class="friend-mode-chk"
+								  [checked]="briarMode"
+								  (change)="briarMode = $event.checked; flushCache();">
+					  Briar Mode
+					</mat-checkbox>
+					
+					<mat-checkbox class="friend-mode-chk"
+								  [checked]="mysteryMode"
+								  (change)="mysteryMode = $event.checked; flushCache();">
+					  Mystery Mode
+					</mat-checkbox>
+					
+					<mat-checkbox class="friend-mode-chk"
+								  [checked]="vulcanMode"
+								  (change)="vulcanMode = $event.checked; flushCache();">
+					  Vulcan Mode
+					</mat-checkbox>
+					
+				</mat-card-content>
 			</mat-card>
 		</div>
 	</mat-drawer>
@@ -55,7 +88,7 @@
 		<div class="main-container">
 			<div class="img-container">
 				<h3 *ngIf="errorText">{{ errorText }}</h3>
-				<img class="image" *ngIf="!isVideo()" [src]="getImage()">
+				<img (click)="spinWheel()" class="image clickable" *ngIf="!isVideo()" [src]="getImage()">
 				<video *ngIf="isVideo()" class="image" autoplay loop preload="auto" controls>
 					<source [src]="getImage()">
 				</video>

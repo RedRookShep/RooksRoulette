@@ -64,3 +64,17 @@
 		margin-bottom: 20px;
 	}
 }
+
+.clickable {
+	cursor: pointer;
+}
+
+.remove-tag-icon {
+	color: red;
+	cursor: pointer;
+	margin-left: 5px;
+}
+
+.friend-mode-list {
+	display: inline-grid;
+}
