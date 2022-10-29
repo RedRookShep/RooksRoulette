@@ -84,6 +84,12 @@
 					  Carwyn Mode
 					</mat-checkbox>
 					
+					<mat-checkbox class="friend-mode-chk"
+								  [checked]="astelMode"
+								  (change)="astelMode = $event.checked; flushCache();">
+					  Astel Mode
+					</mat-checkbox>
+					
 				</mat-card-content>
 			</mat-card>
 		</div>

@@ -82,6 +82,7 @@ export class AppComponent {
 			tags.push("-pregnant");
 			tags.push("-absolutely_everyone");
 			tags.push("score:>99");
+			tags.push("rating:safe");
 		}
 		if (this.briarMode) {
 			tags.push("~border_collie");
@@ -92,22 +93,50 @@ export class AppComponent {
 		}
 		if (this.mysteryMode) {
 			tags.push('score:>99');
-			tags.push('doughnut');
+			tags.push('~doughnut');
+			tags.push('~latex');
+			tags.push('~latex_suit');
+			tags.push('~paws');
+			tags.push('~hypnosis');
+			tags.push('~canine');
+			tags.push('~fox');
+			tags.push('~otter');
+			tags.push('~harness');
+			tags.push('~collar');
+			tags.push('~inflation');
+			
+			tags.push('-female');
+			tags.push('-breasts');
+			tags.push('-mlp');
+			
 		}
 		if (this.vulcanMode) {
 			tags.push('~rubble_(paw_patrol)');
 			tags.push('~violin');
+			tags.push('~latex_suit');
+			tags.push('~latex');
 		}
 		if (this.carwynMode) {
 			tags.push('rating:>99');
 			tags.push('~species_transformation');
-			tags.push('~car');
-			tags.push('-female');
-			tags.push('-breasts');
+			tags.push('~hypnosis');
+			tags.push('~paws');
+			tags.push('~harness');
+			tags.push('~bondage');
+			tags.push('~feral');
+			tags.push('~latex_suit');
+			tags.push('~anal_sex');
+			tags.push('~vaginal_sex');
+			
+			tags.push('-diaper');
+			tags.push('-cub');
+			tags.push('-watersports');
+			tags.push('-peeing');
 		}
 		if (this.astelMode) {
 			tags.push('rating:>99');
 			tags.push('-mlp');
+			tags.push('-cub');
 			tags.push('-my_little_pony');
 			tags.push('~wolf');
 			tags.push('~impregnation');
