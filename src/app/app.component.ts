@@ -42,6 +42,8 @@ export class AppComponent {
 	public briarMode: boolean = false;
 	public mysteryMode: boolean = false;
 	public vulcanMode: boolean = false;
+	public carwynMode: boolean = false;
+	public astelMode: boolean = false;
   
 	constructor(private http: HttpClient) { };
 	
@@ -71,10 +73,12 @@ export class AppComponent {
 		console.log("Getting Posts");
 		var tags: string[] = [];
 		if (this.bayleMode) {
-			tags.push("rating:safe");
+			tags.push("-comic");
 			tags.push("cub");
 			tags.push("male");
 			tags.push("clothing");
+			tags.push("~solo");
+			tags.push("~duo");
 			tags.push("-pregnant");
 			tags.push("-absolutely_everyone");
 			tags.push("score:>99");
@@ -82,6 +86,7 @@ export class AppComponent {
 		if (this.briarMode) {
 			tags.push("~border_collie");
 			tags.push("~harness");
+			tags.push("-female");
 			tags.push("canine");
 			tags.push("score:>99");
 		}
@@ -92,6 +97,27 @@ export class AppComponent {
 		if (this.vulcanMode) {
 			tags.push('~rubble_(paw_patrol)');
 			tags.push('~violin');
+		}
+		if (this.carwynMode) {
+			tags.push('rating:>99');
+			tags.push('~species_transformation');
+			tags.push('~car');
+			tags.push('-female');
+			tags.push('-breasts');
+		}
+		if (this.astelMode) {
+			tags.push('rating:>99');
+			tags.push('-mlp');
+			tags.push('-my_little_pony');
+			tags.push('~wolf');
+			tags.push('~impregnation');
+			tags.push('~angiewolf');
+			tags.push('~amazon_position');
+			tags.push('~backsack');
+			tags.push('~tentacles');
+			tags.push('~zonkpunch');
+			tags.push('~bound');
+			
 		}
 		//Only if no friend modes are active, use the entered tags.; 
 		if (tags.length < 1) {

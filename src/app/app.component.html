@@ -78,6 +78,12 @@
 					  Vulcan Mode
 					</mat-checkbox>
 					
+					<mat-checkbox class="friend-mode-chk"
+								  [checked]="carwynMode"
+								  (change)="carwynMode = $event.checked; flushCache();">
+					  Carwyn Mode
+					</mat-checkbox>
+					
 				</mat-card-content>
 			</mat-card>
 		</div>
