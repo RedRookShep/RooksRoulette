@@ -56,6 +56,11 @@
 
 .info-button {
 	margin-left: auto;
+	display: flex;
+}
+
+.score-label {
+	margin-top: 5px;
 }
 
 @media all and (max-width: 650px) {

@@ -11,15 +11,18 @@
 		<button class="wheel-button" color="primary" mat-raised-button (click)="spinWheel()">
 			Spin The Wheel!
 		</button>
-		
 		<button *ngIf="posts.length > 0" (click)="spinWheel()" mat-icon-button>
 			<mat-icon>arrow_forward</mat-icon>
 		</button>
 	</div>
-	<button *ngIf="currentPost >= 0" class="info-button" mat-icon-button 
-		(click)="goToSource()" matTooltip="Open In e621">
-		<mat-icon>pets</mat-icon>
-	</button>
+	<div *ngIf="currentPost >= 0" class="info-button">
+		<p class="score-label">Score: {{ getScore() }}</p>
+		<button mat-icon-button 
+			(click)="goToSource()" matTooltip="Open In e621">
+			<mat-icon>pets</mat-icon>
+		</button>
+	</div>
+	
 </mat-toolbar>
 
 

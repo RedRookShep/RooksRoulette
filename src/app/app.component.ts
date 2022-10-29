@@ -257,6 +257,14 @@ export class AppComponent {
 		}
 	}
 	
+	public getScore(): string {
+		if (this.currentPost < 0 || this.posts.length < 1) return '';
+		if (this.posts[this.currentPost]?.score?.total)
+			return this.posts[this.currentPost]?.score?.total.toString();
+			
+			return "";
+	}
+	
 	public isVideo() {
 		if (this.posts[this.currentPost]?.file?.ext == "webm" || 
 			this.posts[this.currentPost]?.file?.ext == "mp4")
