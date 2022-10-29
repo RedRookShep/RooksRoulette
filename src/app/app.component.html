@@ -90,9 +90,15 @@
 					  Astel Mode
 					</mat-checkbox>
 					
+					<mat-checkbox class="friend-mode-chk"
+								  [checked]="crayonMode"
+								  (change)="crayonMode = $event.checked; flushCache();">
+					  Crayon Mode
+					</mat-checkbox>
+					
 				</mat-card-content>
 			</mat-card>
-			Version 69.420
+			Version 69.420.01
 		</div>
 	</mat-drawer>
 	

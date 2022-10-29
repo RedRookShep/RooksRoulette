@@ -44,6 +44,7 @@ export class AppComponent {
 	public vulcanMode: boolean = false;
 	public carwynMode: boolean = false;
 	public astelMode: boolean = false;
+	public crayonMode: boolean = false;
   
 	constructor(private http: HttpClient) { };
 	
@@ -112,9 +113,24 @@ export class AppComponent {
 		}
 		if (this.vulcanMode) {
 			tags.push('~rubble_(paw_patrol)');
-			tags.push('~violin');
 			tags.push('~latex_suit');
 			tags.push('~latex');
+			tags.push('~living_suit');
+			tags.push('~goo');
+			tags.push('~corruption');
+			tags.push('~hypnosis');
+			tags.push('~merge');
+			tags.push('~vore');
+			tags.push('~kaomoro');
+			tags.push('~snake');
+			tags.push('~coils');
+			tags.push('~restricting');
+			tags.push('~paws');
+			
+			tags.push('-female');
+			tags.push('-breasts');
+			tags.push('-mlp');
+			tags.push('-vagina');
 		}
 		if (this.carwynMode) {
 			tags.push('rating:>99');
@@ -127,10 +143,12 @@ export class AppComponent {
 			tags.push('~latex_suit');
 			tags.push('~anal_sex');
 			tags.push('~vaginal_sex');
+			tags.push('~pokemon');
 			
 			tags.push('-diaper');
 			tags.push('-cub');
 			tags.push('-watersports');
+			tags.push('-mlp');
 			tags.push('-peeing');
 		}
 		if (this.astelMode) {
@@ -146,6 +164,27 @@ export class AppComponent {
 			tags.push('~tentacles');
 			tags.push('~zonkpunch');
 			tags.push('~bound');
+			
+		}
+		if (this.crayonMode) {
+			tags.push('rating:>99');
+			tags.push('~cum');
+			tags.push('~group');
+			tags.push('~creampie');
+			tags.push('~underwear');
+			tags.push('~jockstrap');
+			tags.push('~daddy_kink');
+			
+			tags.push('-mlp');
+			tags.push('-straight');
+			tags.push('-musk');
+			tags.push('-vore');
+			tags.push('-hyper');
+			tags.push('-goo');
+			tags.push('-cub');
+			tags.push('-nintendo');
+			tags.push('-feral');
+			tags.push('-inflatable');
 			
 		}
 		//Only if no friend modes are active, use the entered tags.; 
