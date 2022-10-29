@@ -105,10 +105,18 @@ export class AppComponent {
 			tags.push('~harness');
 			tags.push('~collar');
 			tags.push('~inflation');
+			tags.push('~size_play');
+			
 			
 			tags.push('-female');
 			tags.push('-breasts');
 			tags.push('-mlp');
+			tags.push('-pussy');
+			tags.push('-crossdressing');
+			tags.push('-girly');
+			tags.push('-skirt');
+			tags.push('-sonic_the_hedgehog_(series)');
+			
 			
 		}
 		if (this.vulcanMode) {
@@ -126,11 +134,16 @@ export class AppComponent {
 			tags.push('~coils');
 			tags.push('~restricting');
 			tags.push('~paws');
+			tags.push('~taurs');
+			tags.push('~macro');
+			tags.push('~sizeplay');
 			
 			tags.push('-female');
 			tags.push('-breasts');
 			tags.push('-mlp');
 			tags.push('-vagina');
+			tags.push('-digestion');
+			tags.push('-burp');
 		}
 		if (this.carwynMode) {
 			tags.push('rating:>99');
@@ -150,13 +163,20 @@ export class AppComponent {
 			tags.push('-watersports');
 			tags.push('-mlp');
 			tags.push('-peeing');
+			tags.push('-gore');
 		}
 		if (this.astelMode) {
 			tags.push('rating:>99');
 			tags.push('-mlp');
 			tags.push('-cub');
+			tags.push('-watersports');
+			tags.push('-urine');
+			tags.push('-unbirthing');
 			tags.push('-my_little_pony');
-			tags.push('~wolf');
+			tags.push('-body_tearing');
+			tags.push('-imminent_death');
+			tags.push('-gore');
+			
 			tags.push('~impregnation');
 			tags.push('~angiewolf');
 			tags.push('~amazon_position');
@@ -185,6 +205,7 @@ export class AppComponent {
 			tags.push('-nintendo');
 			tags.push('-feral');
 			tags.push('-inflatable');
+			tags.push('-beastiality');
 			
 		}
 		//Only if no friend modes are active, use the entered tags.; 
@@ -218,6 +239,7 @@ export class AppComponent {
 					this.posts.length = this.posts.length;
 					if (stepOnFetch)
 						this.currentPost++;
+					console.log(data.posts);
 				}
 				
 			});
