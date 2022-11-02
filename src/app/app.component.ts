@@ -164,6 +164,8 @@ export class AppComponent {
 			tags.push('-mlp');
 			tags.push('-peeing');
 			tags.push('-gore');
+			tags.push('-human_on_feral');
+			tags.push('-prosthetic');
 		}
 		if (this.astelMode) {
 			tags.push('rating:>99');
